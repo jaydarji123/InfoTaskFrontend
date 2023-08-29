@@ -8,6 +8,8 @@ const Profile = () => {
   
   const {isAuthenticated,loading,user} = useContext(Context);
 
+  if(isAuthenticated) return <Navigate to={"/login"}/>;
+  
   return 
     loading ? ( <Loader/> ) : (
     <div>
