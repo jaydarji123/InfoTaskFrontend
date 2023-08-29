@@ -31,10 +31,7 @@ const Header = () => {
         </div>
         <article>
             <Link to={"/"}>Home</Link>
-            {
-              isAuthenticated ?  <Link to={"/profile"}>Profile</Link> : <Navigate to={"/login"}/> 
-            }
-            
+            <Link to={"/profile"}>Profile</Link> 
             {
                 isAuthenticated ? <button disabled={loading} className="btn" onClick={logoutHandler}>Logout</button> : <Link to="/login">Login</Link> 
             }
